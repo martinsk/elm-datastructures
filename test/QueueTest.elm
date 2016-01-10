@@ -1,6 +1,6 @@
 module QueueTest where
 
-import Ajour.Queue as Queue
+import Datastructures.Queue as Queue
 
 import Check exposing (..)
 import Check.Investigator exposing (..)
