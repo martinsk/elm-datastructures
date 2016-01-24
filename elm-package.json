@@ -1,6 +1,6 @@
 {
     "version": "1.0.1",
-    "summary": "A collection of helpfull datastructures",
+    "summary": "A collection of helpful datastructures",
     "repository": "https://github.com/martinsk/elm-datastructures.git",
     "license": "MIT",
     "source-directories": [
