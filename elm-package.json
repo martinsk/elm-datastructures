@@ -7,7 +7,7 @@
         "src"
     ],
     "exposed-modules": [
-        "Queue"
+        "Datastructures.Queue"
     ],
     "dependencies": {
         "NoRedInk/elm-check": "2.0.0 <= v < 3.0.0",
