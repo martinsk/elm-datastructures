@@ -1,13 +1,13 @@
 {
     "version": "1.0.1",
-    "summary": "A collection of helpfull datastructures",
+    "summary": "A collection of helpful datastructures",
     "repository": "https://github.com/martinsk/elm-datastructures.git",
     "license": "MIT",
     "source-directories": [
         "src"
     ],
     "exposed-modules": [
-        "Queue"
+        "Datastructures.Queue"
     ],
     "dependencies": {
         "NoRedInk/elm-check": "2.0.0 <= v < 3.0.0",

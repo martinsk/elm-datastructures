@@ -1,6 +1,6 @@
 module Datastructures.Queue where
 
-{-| This Module implements a simple LIFO queue 
+{-| This module implements a simple LIFO queue
 
 # Definition
 @docs Queue
@@ -10,12 +10,12 @@ This is based on the
 # Fundamentals 
 @docs init, enqueue, dequeue, length
 
-# Usefull functions
+# Useful functions
 @docs foldr, foldl, map, fromList, toList
 
 -}
 
-{-| a simple queue.
+{-| A simple queue.
 -}
 type alias Queue a = (List a, List a)
 
@@ -25,13 +25,13 @@ init : Queue a
 init = ([], [])
 
 
-{-|Enqueue an element on a queue -}
+{-| Enqueue an element on a queue -}
 enqueue :  a -> Queue a -> Queue a
 enqueue a (inqueue, outqueue) =
   ((a::inqueue), outqueue)
 
-{-|Dequeues an element of the end of a queue, and also returns thel
-element -}
+{-| Dequeues an element off the end of a queue, and also returns the
+updated queue with that element removed -}
 
 dequeue : Queue a -> (Maybe a, Queue a)
 dequeue (inqueue,outqueue) =
@@ -55,13 +55,13 @@ length (inqueue, outqueue) =
   in
     inqueue_len + outqueue_len
   
-{-| Fold across a queue front ot back -}
+{-| Fold across a queue front to back -}
 
 foldr : ( a -> b -> b) -> b -> Queue a -> b
 foldr f acc (inqueue, outqueue) =
   List.foldl f (List.foldr f acc inqueue) outqueue
 
-{-| Fold across a queue back ot front -}
+{-| Fold across a queue back to front -}
 
 foldl : ( a -> b -> b) -> b -> Queue a -> b
 foldl f acc (inqueue, outqueue) =
@@ -76,14 +76,14 @@ map f (inqueue, outqueue) =
   (List.map f inqueue, List.map f outqueue)
 
 
-{-| converts a queue into a list  -}
+{-| converts a queue into a list -}
 
 fromList : List a -> Queue a
 fromList l =
   (l, [])
 
   
-{-| converts a list into a queue  -}
+{-| converts a list into a queue -}
   
 toList : Queue a -> List a
 toList (inqueue, outqueue) =
